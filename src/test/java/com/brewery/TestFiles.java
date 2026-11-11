@@ -9,6 +9,7 @@ public final class TestFiles {
 
     public static final Path BEER_XML = resource("beer.xml");
     public static final Path BEER_XSD = resource("beer.xsd");
+    public static final Path BEER_XSL = resource("beer.xsl");
 
     public static final Path VALID = resource("beers-valid.xml");
     public static final Path INVALID = resource("beers-invalid.xml");
