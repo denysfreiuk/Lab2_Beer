@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Beer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="beer.xsd">
+
+    <BeerItem id="beer-1">
+        <Name>Lvivske 1715</Name>
+        <Type>light</Type>
+        <Al>true</Al>
+        <Manufacturer>Carlsberg Ukraine</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>barley malt</Ingredient>
+            <Ingredient>hops</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Strength>4.7</Strength>
+            <Transparency>90</Transparency>
+            <Filtered>true</Filtered>
+            <NutritionalValue>42</NutritionalValue>
+            <Bottling volume="0.5" material="glass"/>
+        </Chars>
+    </BeerItem>
+
+    <BeerItem id="beer-2">
+        <Name>Guinness Draught</Name>
+        <Type>dark</Type>
+        <Al>true</Al>
+        <Manufacturer>Guinness</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>roasted barley</Ingredient>
+            <Ingredient>barley malt</Ingredient>
+            <Ingredient>hops</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Strength>4.2</Strength>
+            <Transparency>5</Transparency>
+            <Filtered>true</Filtered>
+            <NutritionalValue>35</NutritionalValue>
+            <Bottling volume="0.44" material="aluminium"/>
+        </Chars>
+    </BeerItem>
+
+    <BeerItem id="beer-3">
+        <Name>Obolon 0.0</Name>
+        <Type>light</Type>
+        <Al>false</Al>
+        <Manufacturer>Obolon</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>barley malt</Ingredient>
+            <Ingredient>hops</Ingredient>
+            <Ingredient>sugar</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Transparency>95</Transparency>
+            <Filtered>true</Filtered>
+            <NutritionalValue>26</NutritionalValue>
+            <Bottling volume="0.5" material="aluminium"/>
+        </Chars>
+    </BeerItem>
+
+    <BeerItem id="beer-4">
+        <Name>Pilsner Urquell</Name>
+        <Type>lager</Type>
+        <Al>true</Al>
+        <Manufacturer>Plzensky Prazdroj</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>barley malt</Ingredient>
+            <Ingredient>Saaz hops</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Strength>4.4</Strength>
+            <Transparency>92</Transparency>
+            <Filtered>true</Filtered>
+            <NutritionalValue>43</NutritionalValue>
+            <Bottling volume="0.33" material="glass"/>
+        </Chars>
+    </BeerItem>
+
+    <BeerItem id="beer-5">
+        <Name>Pravda Live</Name>
+        <Type>live</Type>
+        <Al>true</Al>
+        <Manufacturer>Pravda Beer Theatre</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>wheat malt</Ingredient>
+            <Ingredient>hops</Ingredient>
+            <Ingredient>yeast</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Strength>5.5</Strength>
+            <Transparency>40</Transparency>
+            <Filtered>false</Filtered>
+            <NutritionalValue>48</NutritionalValue>
+            <Bottling volume="30" material="steel"/>
+        </Chars>
+    </BeerItem>
+
+    <BeerItem id="beer-6">
+        <Name>Chernihivske Bile</Name>
+        <Type>live</Type>
+        <Al>true</Al>
+        <Manufacturer>AB InBev Efes Ukraine</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>barley malt</Ingredient>
+            <Ingredient>wheat malt</Ingredient>
+            <Ingredient>hops</Ingredient>
+            <Ingredient>coriander</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Strength>4.8</Strength>
+            <Transparency>30</Transparency>
+            <Filtered>false</Filtered>
+            <NutritionalValue>45</NutritionalValue>
+            <Bottling volume="1" material="plastic"/>
+        </Chars>
+    </BeerItem>
+
+    <BeerItem id="beer-7">
+        <Name>Leffe Brune</Name>
+        <Type>dark</Type>
+        <Al>true</Al>
+        <Manufacturer>Abbaye de Leffe</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>barley malt</Ingredient>
+            <Ingredient>caramel malt</Ingredient>
+            <Ingredient>hops</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Strength>6.5</Strength>
+            <Transparency>10</Transparency>
+            <Filtered>true</Filtered>
+            <NutritionalValue>61</NutritionalValue>
+            <Bottling volume="0.5" material="glass"/>
+        </Chars>
+    </BeerItem>
+
+    <BeerItem id="beer-8">
+        <Name>Stella Artois</Name>
+        <Type>lager</Type>
+        <Al>true</Al>
+        <Manufacturer>AB InBev</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>barley malt</Ingredient>
+            <Ingredient>maize</Ingredient>
+            <Ingredient>hops</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Strength>5.0</Strength>
+            <Transparency>94</Transparency>
+            <Filtered>true</Filtered>
+            <NutritionalValue>41</NutritionalValue>
+            <Bottling volume="0.75" material="glass"/>
+        </Chars>
+    </BeerItem>
+</Beer>

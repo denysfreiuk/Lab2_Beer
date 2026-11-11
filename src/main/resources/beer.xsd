@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:annotation>
+        <xs:documentation>
+            Variant 10. Beer catalogue: the root element "Beer" holds a list of
+            "BeerItem" elements, each describing a single sort of beer.
+        </xs:documentation>
+    </xs:annotation>
+
+    <!-- ===== Root element ===== -->
+
+    <xs:element name="Beer" type="BeerCatalog"/>
+
+    <!-- ===== Complex types ===== -->
+
+    <xs:complexType name="BeerCatalog">
+        <xs:sequence>
+            <xs:element name="BeerItem" type="BeerItem" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="BeerItem">
+        <xs:sequence>
+            <xs:element name="Name" type="NonEmptyString"/>
+            <xs:element name="Type" type="BeerType"/>
+            <xs:element name="Al" type="xs:boolean"/>
+            <xs:element name="Manufacturer" type="NonEmptyString"/>
+            <xs:element name="Ingredients" type="Ingredients"/>
+            <xs:element name="Chars" type="Chars"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="BeerId" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="Ingredients">
+        <xs:sequence>
+            <xs:element name="Ingredient" type="NonEmptyString" minOccurs="2" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Chars">
+        <xs:sequence>
+            <!-- Strength is given only for alcoholic beer -->
+            <xs:element name="Strength" type="Strength" minOccurs="0"/>
+            <xs:element name="Transparency" type="Percent"/>
+            <xs:element name="Filtered" type="xs:boolean"/>
+            <xs:element name="NutritionalValue" type="Calories"/>
+            <xs:element name="Bottling" type="Bottling"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Bottling">
+        <xs:attribute name="volume" type="Volume" use="required"/>
+        <xs:attribute name="material" type="ContainerMaterial" use="required"/>
+    </xs:complexType>
+
+    <!-- ===== Simple types ===== -->
+
+    <xs:simpleType name="BeerId">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="beer-[0-9]{1,4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="NonEmptyString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="100"/>
+            <xs:whiteSpace value="collapse"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="BeerType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="dark"/>
+            <xs:enumeration value="light"/>
+            <xs:enumeration value="lager"/>
+            <xs:enumeration value="live"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ContainerMaterial">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="glass"/>
+            <xs:enumeration value="plastic"/>
+            <xs:enumeration value="aluminium"/>
+            <xs:enumeration value="steel"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Alcohol by volume, % -->
+    <xs:simpleType name="Strength">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:maxInclusive value="20"/>
+            <xs:fractionDigits value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Percent">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Nutritional value, kcal per 100 ml -->
+    <xs:simpleType name="Calories">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="500"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Container volume, litres -->
+    <xs:simpleType name="Volume">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+            <xs:maxInclusive value="50"/>
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
