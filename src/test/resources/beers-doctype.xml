@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Beer [
+    <!ENTITY secret SYSTEM "file:///etc/passwd">
+]>
+<!-- An XXE attempt: documents with a DOCTYPE must be rejected. -->
+<Beer>
+    <BeerItem id="beer-1">
+        <Name>&secret;</Name>
+        <Type>light</Type>
+        <Al>true</Al>
+        <Manufacturer>Nobody</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>malt</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Strength>4.5</Strength>
+            <Transparency>80</Transparency>
+            <Filtered>true</Filtered>
+            <NutritionalValue>40</NutritionalValue>
+            <Bottling volume="0.5" material="glass"/>
+        </Chars>
+    </BeerItem>
+</Beer>

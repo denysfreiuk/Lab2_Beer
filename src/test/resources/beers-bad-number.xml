@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Well-formed, but Transparency is not a number. -->
+<Beer>
+    <BeerItem id="beer-1">
+        <Name>Cloudy Beer</Name>
+        <Type>light</Type>
+        <Al>true</Al>
+        <Manufacturer>Nobody</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>malt</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Strength>4.5</Strength>
+            <Transparency>cloudy</Transparency>
+            <Filtered>true</Filtered>
+            <NutritionalValue>40</NutritionalValue>
+            <Bottling volume="0.5" material="glass"/>
+        </Chars>
+    </BeerItem>
+</Beer>

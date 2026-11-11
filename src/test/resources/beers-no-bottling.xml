@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Well-formed, but the mandatory Bottling element is missing. -->
+<Beer>
+    <BeerItem id="beer-1">
+        <Name>Draught Only</Name>
+        <Type>light</Type>
+        <Al>true</Al>
+        <Manufacturer>Nobody</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>malt</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Strength>4.5</Strength>
+            <Transparency>80</Transparency>
+            <Filtered>true</Filtered>
+            <NutritionalValue>40</NutritionalValue>
+        </Chars>
+    </BeerItem>
+</Beer>
