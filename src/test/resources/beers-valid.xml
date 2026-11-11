@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- A small valid document with well-known values for the parser tests. -->
+<Beer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="beer.xsd">
+
+    <BeerItem id="beer-10">
+        <Name>Test Stout</Name>
+        <Type>dark</Type>
+        <Al>true</Al>
+        <Manufacturer><![CDATA[Stout & Sons]]></Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>roasted malt</Ingredient>
+            <Ingredient>hops</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Strength>6.5</Strength>
+            <Transparency>10</Transparency>
+            <Filtered>false</Filtered>
+            <NutritionalValue>60</NutritionalValue>
+            <Bottling volume="0.5" material="glass"/>
+        </Chars>
+    </BeerItem>
+
+    <!-- non-alcoholic: no Strength, booleans in the numeric form -->
+    <BeerItem id="beer-11">
+        <Name>Zero Lager</Name>
+        <Type>lager</Type>
+        <Al>0</Al>
+        <Manufacturer>Sober Brewery</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>malt</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Transparency>95</Transparency>
+            <Filtered>1</Filtered>
+            <NutritionalValue>25</NutritionalValue>
+            <Bottling volume="0.33" material="aluminium"/>
+        </Chars>
+    </BeerItem>
+
+    <BeerItem id="beer-12">
+        <Name>
+            Amber Live
+        </Name>
+        <Type>live</Type>
+        <Al>true</Al>
+        <Manufacturer>Craft Yard</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>wheat malt</Ingredient>
+            <Ingredient>hops</Ingredient>
+            <Ingredient>yeast</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Strength>5.2</Strength>
+            <Transparency>35</Transparency>
+            <Filtered>false</Filtered>
+            <NutritionalValue>47</NutritionalValue>
+            <Bottling volume="20" material="steel"/>
+        </Chars>
+    </BeerItem>
+</Beer>

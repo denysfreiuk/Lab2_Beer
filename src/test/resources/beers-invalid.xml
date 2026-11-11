@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Well-formed, but breaks the schema in several places. -->
+<Beer>
+    <!-- unknown type, transparency above 100, missing "material" attribute -->
+    <BeerItem id="beer-1">
+        <Name>Wrong Beer</Name>
+        <Type>strong</Type>
+        <Al>true</Al>
+        <Manufacturer>Nobody</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+            <Ingredient>malt</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Strength>4.5</Strength>
+            <Transparency>150</Transparency>
+            <Filtered>true</Filtered>
+            <NutritionalValue>40</NutritionalValue>
+            <Bottling volume="0.5"/>
+        </Chars>
+    </BeerItem>
+
+    <!-- duplicated id, a single ingredient -->
+    <BeerItem id="beer-1">
+        <Name>Copy Beer</Name>
+        <Type>light</Type>
+        <Al>true</Al>
+        <Manufacturer>Nobody</Manufacturer>
+        <Ingredients>
+            <Ingredient>water</Ingredient>
+        </Ingredients>
+        <Chars>
+            <Strength>4.5</Strength>
+            <Transparency>80</Transparency>
+            <Filtered>true</Filtered>
+            <NutritionalValue>40</NutritionalValue>
+            <Bottling volume="0.5" material="glass"/>
+        </Chars>
+    </BeerItem>
+</Beer>
